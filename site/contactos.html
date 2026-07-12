@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactos — IBK Green Energy X | Portugal e Espanha</title>
+  <meta name="description" content="Contacte a equipa de engenharia da IBK Green Energy X para um orçamento de energia solar, bateria ou carregador VE em Portugal ou Espanha." />
+  <link rel="icon" href="assets/img/Logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .form-sent {
+      display: none;
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      color: var(--pine);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">
+      <img data-img="assets/img/Logo" alt="IBK Green Energy X" />
+      <span>IBK GREEN ENERGY X</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+      <li><a href="servicos.html" data-i18n="nav.services">Serviços</a></li>
+      <li><a href="simulador.html" data-i18n="nav.simulator">Simulador</a></li>
+      <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="contactos.html" class="active" data-i18n="nav.contact">Contactos</a></li>
+      <li><a href="contactos.html" class="nav-cta" data-i18n="nav.cta">Pedir orçamento</a></li>
+      <li>
+        <div class="lang-switch">
+          <button data-lang="pt">PT</button>
+          <button data-lang="es">ES</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="tag-mono on-dark" data-i18n="contact.tag">Contactos</p>
+      <h1 class="display" data-i18n="contact.h1">Vamos falar do seu projeto.</h1>
+      <p data-i18n="contact.p">Responda em português, espanhol ou inglês — a nossa equipa acompanha projetos em Portugal e Espanha.</p>
+    </div>
+  </header>
+
+  <div class="content-wrap">
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="contact-info">
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem" data-i18n="contact.info.h3">Contactos diretos</h3>
+        <ul>
+          <li>
+            <b data-i18n="contact.info.addr">Morada</b>
+            <span data-i18n="contact.info.addr.v">Portugal (sede) · Atuação em PT e ES</span>
+          </li>
+          <li>
+            <b data-i18n="contact.info.mail">Email</b>
+            <a href="mailto:geral@ibkgreenenergyx.com" style="color:var(--copper)">geral@ibkgreenenergyx.com</a>
+          </li>
+          <li>
+            <b data-i18n="contact.info.phone">Telefone / WhatsApp</b>
+            <a href="tel:+351000000000" style="color:var(--copper)">+351 000 000 000</a>
+          </li>
+          <li>
+            <b data-i18n="contact.info.hours">Horário</b>
+            <span data-i18n="contact.info.hours.v">Segunda a sexta, 9h–18h (WET)</span>
+          </li>
+        </ul>
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--pine);border-radius:var(--radius);color:var(--paper)">
+          <p class="tag-mono on-dark" style="font-size:0.64rem">IBK Network</p>
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;margin-top:0.7rem;color:var(--white)" data-i18n="contact.partner.h2">É instalador certificado?</h3>
+          <p style="font-size:0.9rem;margin-top:0.6rem;color:rgba(244,246,241,0.78)" data-i18n="contact.partner.p">Junte-se à rede IBK: receba leads qualificados, apoio de engenharia e cresça connosco no mercado ibérico.</p>
+          <div class="btn-row" style="margin-top:1.4rem">
+            <a class="btn btn-amber" href="mailto:parceiros@ibkgreenenergyx.com" data-i18n="home.ib.cta">Tornar-me parceiro</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulário -->
+      <div class="contact-form">
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;margin-bottom:1.6rem" data-i18n="contact.form.h3">Envie-nos uma mensagem</h3>
+
+        <div class="form-sent" id="form-sent">
+          ✓ &nbsp;Mensagem enviada! Respondemos em até 1 dia útil.
+        </div>
+
+        <div id="form-body">
+          <div class="field-row">
+            <div class="field">
+              <label for="cf-name" data-i18n="contact.form.name">Nome</label>
+              <input type="text" id="cf-name" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="cf-email" data-i18n="contact.form.email">Email</label>
+              <input type="email" id="cf-email" autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="cf-phone" data-i18n="contact.form.phone">Telefone</label>
+              <input type="tel" id="cf-phone" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="cf-subject" data-i18n="contact.form.subject">Assunto</label>
+              <select id="cf-subject">
+                <option value="" disabled selected>—</option>
+                <option data-i18n="contact.form.s1">Orçamento — solar fotovoltaico</option>
+                <option data-i18n="contact.form.s2">Orçamento — bateria / backup</option>
+                <option data-i18n="contact.form.s3">Orçamento — carregador VE</option>
+                <option data-i18n="contact.form.s4">Orçamento — instalação elétrica</option>
+                <option data-i18n="contact.form.s5">Quero ser parceiro instalador</option>
+                <option data-i18n="contact.form.s6">Outro assunto</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="cf-msg" data-i18n="contact.form.msg">Mensagem</label>
+            <textarea id="cf-msg" rows="5"></textarea>
+          </div>
+
+          <button class="btn btn-pine" id="cf-submit" data-i18n="contact.form.btn" style="width:100%;justify-content:center">Enviar mensagem</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <img data-img="assets/img/Logo" alt="IBK Green Energy X" />
+        <p data-i18n="footer.tagline">Engenharia de energias renováveis para Portugal e Espanha.</p>
+      </div>
+      <div>
+        <h5 data-i18n="footer.nav">Navegação</h5>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="simulador.html" data-i18n="nav.simulator">Simulador</a></li>
+          <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="footer.services">Serviços</h5>
+        <ul>
+          <li><a href="servicos.html#solar" data-i18n="footer.solar">Solar fotovoltaico</a></li>
+          <li><a href="servicos.html#baterias" data-i18n="footer.batt">Baterias e backup</a></li>
+          <li><a href="servicos.html#carregadores" data-i18n="footer.ev">Carregadores VE</a></li>
+          <li><a href="servicos.html#eletricas" data-i18n="footer.elec">Instalações elétricas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="footer.contact">Contactos</h5>
+        <ul>
+          <li><a href="mailto:geral@ibkgreenenergyx.com">geral@ibkgreenenergyx.com</a></li>
+          <li><a href="contactos.html" data-i18n="nav.cta">Pedir orçamento</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IBK Green Energy X. <span data-i18n="footer.rights">Todos os direitos reservados.</span></span>
+      <span>Portugal · España</span>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("cf-submit").addEventListener("click", () => {
+      const name = document.getElementById("cf-name").value.trim();
+      const email = document.getElementById("cf-email").value.trim();
+      const msg = document.getElementById("cf-msg").value.trim();
+      if (!name || !email || !msg) { alert("Por favor preencha pelo menos nome, email e mensagem."); return; }
+      document.getElementById("form-body").style.display = "none";
+      document.getElementById("form-sent").style.display = "block";
+    });
+  </script>
+</body>
+</html>

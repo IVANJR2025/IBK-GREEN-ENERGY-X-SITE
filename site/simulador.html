@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador — Kit Fotovoltaico, Bateria e Carregador VE | IBK Green Energy X</title>
+  <meta name="description" content="Simule gratuitamente o seu kit fotovoltaico, bateria ou carregador de veículo elétrico. Motores de cálculo de engenharia para Portugal e Espanha." />
+  <link rel="icon" href="assets/img/Logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">
+      <img data-img="assets/img/Logo" alt="IBK Green Energy X" />
+      <span>IBK GREEN ENERGY X</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+      <li><a href="servicos.html" data-i18n="nav.services">Serviços</a></li>
+      <li><a href="simulador.html" class="active" data-i18n="nav.simulator">Simulador</a></li>
+      <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="contactos.html" data-i18n="nav.contact">Contactos</a></li>
+      <li><a href="contactos.html" class="nav-cta" data-i18n="nav.cta">Pedir orçamento</a></li>
+      <li>
+        <div class="lang-switch">
+          <button data-lang="pt">PT</button>
+          <button data-lang="es">ES</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="tag-mono on-dark" data-i18n="sim.tag">Simulador</p>
+      <h1 class="display" data-i18n="sim.h1">Descubra o sistema ideal para si.</h1>
+      <p data-i18n="sim.p">Três motores de cálculo desenvolvidos pela nossa equipa de engenharia. Os resultados são estimativas realistas com base nos dados que introduzir — o orçamento final é sempre confirmado por estudo técnico gratuito.</p>
+    </div>
+  </header>
+
+  <div class="content-wrap">
+
+    <!-- Tabs -->
+    <div class="sim-tabs">
+      <button class="sim-tab active" data-panel="panel-pv" data-i18n="sim.tab.pv">Kit Fotovoltaico</button>
+      <button class="sim-tab" data-panel="panel-batt" data-i18n="sim.tab.batt">Bateria</button>
+      <button class="sim-tab" data-panel="panel-ev" data-i18n="sim.tab.ev">Carregador VE</button>
+    </div>
+
+    <div class="sim-layout">
+      <div>
+
+        <!-- ============ PAINEL PV ============ -->
+        <div class="sim-panel active" id="panel-pv">
+          <div class="sim-form">
+            <h3 data-i18n="sim.pv.h3">Simulação de kit fotovoltaico</h3>
+
+            <div class="field">
+              <label for="pv-region" data-i18n="sim.pv.loc">Localização</label>
+              <select id="pv-region"></select>
+              <p class="hint" data-i18n="sim.pv.loc.hint">Usamos a irradiação solar média da sua região.</p>
+            </div>
+
+            <div class="field">
+              <label for="pv-addr" data-i18n="sim.pv.addr">Morada (rua e número)</label>
+              <input type="text" id="pv-addr" data-i18n-placeholder="sim.pv.addr.ph" placeholder="Ex.: Rua das Flores 12" />
+            </div>
+
+            <div class="field">
+              <label data-i18n="sim.pv.input">Como prefere indicar o consumo?</label>
+              <div class="radio-pills">
+                <label><input type="radio" name="pv-mode" value="kwh" checked /><span>kWh</span></label>
+                <label><input type="radio" name="pv-mode" value="eur" /><span>€</span></label>
+              </div>
+            </div>
+
+            <div class="field" id="pv-mode-kwh-field">
+              <label for="pv-kwh" data-i18n="sim.pv.kwh">Consumo mensal (kWh)</label>
+              <input type="number" id="pv-kwh" min="1" data-i18n-placeholder="sim.pv.kwh.ph" placeholder="Ex.: 350" />
+            </div>
+            <div class="field" id="pv-mode-eur-field" style="display:none">
+              <label for="pv-eur" data-i18n="sim.pv.eur">Fatura mensal (€)</label>
+              <input type="number" id="pv-eur" min="1" data-i18n-placeholder="sim.pv.eur.ph" placeholder="Ex.: 95" />
+            </div>
+
+            <div class="field">
+              <label data-i18n="sim.pv.phase">Tipo de alimentação</label>
+              <div class="radio-pills">
+                <label><input type="radio" name="pv-phase" value="mono" checked /><span data-i18n="sim.pv.mono">Monofásica</span></label>
+                <label><input type="radio" name="pv-phase" value="tri" /><span data-i18n="sim.pv.tri">Trifásica</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label data-i18n="sim.pv.profile">Perfil de consumo</label>
+              <div class="radio-pills">
+                <label><input type="radio" name="pv-profile" value="day" /><span data-i18n="sim.pv.prof.day">Mais de dia</span></label>
+                <label><input type="radio" name="pv-profile" value="mix" checked /><span data-i18n="sim.pv.prof.mix">Equilibrado</span></label>
+                <label><input type="radio" name="pv-profile" value="night" /><span data-i18n="sim.pv.prof.night">Mais à noite</span></label>
+              </div>
+            </div>
+
+            <button class="btn btn-pine" id="pv-calc" data-i18n="sim.pv.btn">Calcular o meu kit</button>
+          </div>
+        </div>
+
+        <!-- ============ PAINEL BATERIA ============ -->
+        <div class="sim-panel" id="panel-batt">
+          <div class="sim-form">
+            <h3 data-i18n="sim.batt.h3">Simulação de bateria / backup</h3>
+
+            <div class="field">
+              <label for="batt-cons" data-i18n="sim.batt.cons">Consumo mensal (kWh)</label>
+              <input type="number" id="batt-cons" min="1" data-i18n-placeholder="sim.pv.kwh.ph" placeholder="Ex.: 350" />
+            </div>
+
+            <div class="field">
+              <label for="batt-night" data-i18n="sim.batt.night">Percentagem de consumo noturno</label>
+              <select id="batt-night">
+                <option value="30">30%</option>
+                <option value="40">40%</option>
+                <option value="50" selected>50%</option>
+                <option value="60">60%</option>
+                <option value="70">70%</option>
+              </select>
+              <p class="hint" data-i18n="sim.batt.night.hint">Quanto do seu consumo acontece entre o pôr e o nascer do sol.</p>
+            </div>
+
+            <div class="field">
+              <label data-i18n="sim.batt.pv">Já tem (ou vai ter) sistema solar?</label>
+              <div class="radio-pills">
+                <label><input type="radio" name="batt-pv" value="yes" checked /><span data-i18n="sim.batt.pv.yes">Sim</span></label>
+                <label><input type="radio" name="batt-pv" value="no" /><span data-i18n="sim.batt.pv.no">Não</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label data-i18n="sim.batt.backup">Precisa de backup em caso de falha da rede?</label>
+              <div class="radio-pills">
+                <label><input type="radio" name="batt-backup" value="yes" /><span data-i18n="sim.batt.backup.yes">Sim, circuitos críticos</span></label>
+                <label><input type="radio" name="batt-backup" value="no" checked /><span data-i18n="sim.batt.backup.no">Não, só otimizar consumo</span></label>
+              </div>
+            </div>
+
+            <button class="btn btn-pine" id="batt-calc" data-i18n="sim.batt.btn">Calcular a minha bateria</button>
+          </div>
+        </div>
+
+        <!-- ============ PAINEL EV ============ -->
+        <div class="sim-panel" id="panel-ev">
+          <div class="sim-form">
+            <h3 data-i18n="sim.ev.h3">Simulação de carregador de veículo elétrico</h3>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="ev-km" data-i18n="sim.ev.km">Quilómetros por dia (média)</label>
+                <input type="number" id="ev-km" min="1" data-i18n-placeholder="sim.ev.km.ph" placeholder="Ex.: 45" />
+              </div>
+              <div class="field">
+                <label for="ev-cons" data-i18n="sim.ev.cons">Consumo do veículo (kWh/100 km)</label>
+                <input type="number" id="ev-cons" min="10" max="30" value="17" step="0.5" />
+                <p class="hint" data-i18n="sim.ev.cons.hint">Se não souber, deixe 17 — é a média dos VE atuais.</p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="ev-batt" data-i18n="sim.ev.battcap">Capacidade da bateria do veículo (kWh)</label>
+              <input type="number" id="ev-batt" min="10" data-i18n-placeholder="sim.ev.battcap.ph" placeholder="Ex.: 60" />
+            </div>
+
+            <div class="field">
+              <label data-i18n="sim.ev.supply">Alimentação disponível</label>
+              <div class="radio-pills">
+                <label><input type="radio" name="ev-supply" value="mono" checked /><span data-i18n="sim.pv.mono">Monofásica</span></label>
+                <label><input type="radio" name="ev-supply" value="tri" /><span data-i18n="sim.pv.tri">Trifásica</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="ev-power" data-i18n="sim.ev.power">Potência contratada (kVA)</label>
+              <select id="ev-power">
+                <option value="3.45">3,45 kVA</option>
+                <option value="4.6">4,6 kVA</option>
+                <option value="5.75">5,75 kVA</option>
+                <option value="6.9" selected>6,9 kVA</option>
+                <option value="10.35">10,35 kVA</option>
+                <option value="13.8">13,8 kVA</option>
+                <option value="17.25">17,25 kVA</option>
+                <option value="20.7">20,7 kVA</option>
+                <option value="27.6">27,6 kVA</option>
+                <option value="41.4">41,4 kVA</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label data-i18n="sim.ev.window">Janela de carregamento preferida</label>
+              <div class="radio-pills">
+                <label><input type="radio" name="ev-window" value="8" checked /><span data-i18n="sim.ev.win.night">Noite (8 h)</span></label>
+                <label><input type="radio" name="ev-window" value="4" /><span data-i18n="sim.ev.win.eve">Fim de tarde (4 h)</span></label>
+                <label><input type="radio" name="ev-window" value="0" /><span data-i18n="sim.ev.win.fast">O mais rápido possível</span></label>
+              </div>
+            </div>
+
+            <button class="btn btn-pine" id="ev-calc" data-i18n="sim.ev.btn">Calcular o meu carregador</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ RESULTADO ============ -->
+      <aside class="sim-result" id="sim-result">
+        <div class="placeholder"><p data-i18n="sim.res.empty">Preencha os dados ao lado e clique em calcular. O resultado aparece aqui, em segundos.</p></div>
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <img data-img="assets/img/Logo" alt="IBK Green Energy X" />
+        <p data-i18n="footer.tagline">Engenharia de energias renováveis para Portugal e Espanha.</p>
+      </div>
+      <div>
+        <h5 data-i18n="footer.nav">Navegação</h5>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="simulador.html" data-i18n="nav.simulator">Simulador</a></li>
+          <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="footer.services">Serviços</h5>
+        <ul>
+          <li><a href="servicos.html#solar" data-i18n="footer.solar">Solar fotovoltaico</a></li>
+          <li><a href="servicos.html#baterias" data-i18n="footer.batt">Baterias e backup</a></li>
+          <li><a href="servicos.html#carregadores" data-i18n="footer.ev">Carregadores VE</a></li>
+          <li><a href="servicos.html#eletricas" data-i18n="footer.elec">Instalações elétricas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="footer.contact">Contactos</h5>
+        <ul>
+          <li><a href="mailto:geral@ibkgreenenergyx.com">geral@ibkgreenenergyx.com</a></li>
+          <li><a href="contactos.html" data-i18n="nav.cta">Pedir orçamento</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IBK Green Energy X. <span data-i18n="footer.rights">Todos os direitos reservados.</span></span>
+      <span>Portugal · España</span>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/simulador.js"></script>
+</body>
+</html>

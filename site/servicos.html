@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços — Solar, Baterias, Carregadores VE e Instalações Elétricas | IBK Green Energy X</title>
+  <meta name="description" content="Instalação e projeto de sistemas solares fotovoltaicos, baterias e backup, carregadores de veículos elétricos e instalações elétricas em Portugal e Espanha." />
+  <link rel="icon" href="assets/img/Logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .svc-panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+    .svc-panel-grid figure { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3; }
+    .svc-panel-grid figure img { width: 100%; height: 100%; object-fit: cover; }
+    .svc-panel-grid h2 { font-size: clamp(1.7rem, 3.4vw, 2.6rem); margin-top: 0.9rem; }
+    .svc-panel-grid p.body-text { margin-top: 1.2rem; color: var(--ink-soft); }
+    .bg-pine .svc-panel-grid p.body-text, .bg-pine-deep .svc-panel-grid p.body-text { color: rgba(244,246,241,0.78); }
+    @media (max-width: 1020px) { .svc-panel-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">
+      <img data-img="assets/img/Logo" alt="IBK Green Energy X" />
+      <span>IBK GREEN ENERGY X</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+      <li><a href="servicos.html" class="active" data-i18n="nav.services">Serviços</a></li>
+      <li><a href="simulador.html" data-i18n="nav.simulator">Simulador</a></li>
+      <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="contactos.html" data-i18n="nav.contact">Contactos</a></li>
+      <li><a href="contactos.html" class="nav-cta" data-i18n="nav.cta">Pedir orçamento</a></li>
+      <li>
+        <div class="lang-switch">
+          <button data-lang="pt">PT</button>
+          <button data-lang="es">ES</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="tag-mono on-dark" data-i18n="svcpage.tag">Serviços</p>
+      <h1 class="display" data-i18n="svcpage.h1">Engenharia elétrica e solar, de ponta a ponta.</h1>
+      <p data-i18n="svcpage.p">Cada serviço inclui estudo técnico, projeto, execução e certificação. Atuamos em Portugal e Espanha com equipas próprias e parceiros certificados.</p>
+    </div>
+  </header>
+
+  <main class="stack">
+
+    <!-- SOLAR -->
+    <section class="panel bg-paper" id="solar">
+      <div class="panel-inner">
+        <div class="svc-panel-grid">
+          <div>
+            <span class="svc-code">SVC · PV-01</span>
+            <h2 class="display" data-i18n="svc.solar.h">Sistemas Solares Fotovoltaicos</h2>
+            <p class="body-text" data-i18n="svcpage.solar.body">Dimensionamos sistemas de autoconsumo com base no seu perfil real de consumo, orientação da cobertura e irradiação local. Trabalhamos com módulos de alta eficiência, inversores de marcas de referência europeia e estruturas adaptadas a telhado inclinado, plano ou solo. Tratamos de todo o processo de registo e licenciamento junto das entidades competentes (DGEG em Portugal, distribuidoras em Espanha), e entregamos o sistema com monitorização remota configurada.</p>
+            <div class="btn-row">
+              <a class="btn btn-pine" href="simulador.html" data-i18n="home.cta1">Simular o meu sistema</a>
+            </div>
+          </div>
+          <figure class="reveal"><img data-img="assets/img/FOTO2" alt="Sistema solar fotovoltaico" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- BATERIAS -->
+    <section class="panel bg-pine" id="baterias">
+      <div class="panel-inner">
+        <div class="svc-panel-grid">
+          <figure class="reveal"><img data-img="assets/img/FOTO3" alt="Baterias e sistemas de backup" /></figure>
+          <div>
+            <span class="svc-code" style="border-color:rgba(244,246,241,0.3);color:var(--amber)">SVC · BT-02</span>
+            <h2 class="display" style="color:var(--white)" data-i18n="svc.batt.h">Baterias &amp; Backup</h2>
+            <p class="body-text" data-i18n="svcpage.batt.body">O armazenamento transforma o excedente solar do dia em energia útil à noite. Instalamos baterias de lítio de alta densidade, dimensionadas ao seu perfil de consumo noturno, e sistemas de backup que mantêm os circuitos críticos alimentados em caso de falha da rede — essenciais para habitações, comércio e indústria onde a continuidade importa.</p>
+            <div class="btn-row">
+              <a class="btn btn-amber" href="simulador.html" data-i18n="sim.batt.btn">Calcular a minha bateria</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARREGADORES -->
+    <section class="panel bg-paper-2" id="carregadores">
+      <div class="panel-inner">
+        <div class="svc-panel-grid">
+          <div>
+            <span class="svc-code">SVC · EV-03</span>
+            <h2 class="display" data-i18n="svc.ev.h">Carregadores de Veículos Elétricos</h2>
+            <p class="body-text" data-i18n="svcpage.ev.body">Instalamos carregadores domésticos (wallbox) e postos de carregamento para frotas, empresas e condomínios. O estudo inclui a análise da potência contratada, do quadro elétrico existente e da gestão dinâmica de carga, para carregar o seu veículo sem disparar o disjuntor nem aumentar a potência desnecessariamente.</p>
+            <div class="btn-row">
+              <a class="btn btn-pine" href="simulador.html" data-i18n="sim.ev.btn">Calcular o meu carregador</a>
+            </div>
+          </div>
+          <figure class="reveal"><img data-img="assets/img/FOTO4" alt="Carregador de veículo elétrico" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTALAÇÕES ELÉTRICAS -->
+    <section class="panel bg-paper" id="eletricas">
+      <div class="panel-inner">
+        <div class="svc-panel-grid">
+          <figure class="reveal"><img data-img="assets/img/FOTO5" alt="Instalações elétricas" /></figure>
+          <div>
+            <span class="svc-code">SVC · EL-04</span>
+            <h2 class="display" data-i18n="svc.elec.h">Instalações Elétricas</h2>
+            <p class="body-text" data-i18n="svcpage.elec.body">Executamos instalações elétricas novas e remodelações em contexto residencial, comercial e industrial: quadros elétricos, circuitos, iluminação técnica, correção do fator de potência e certificação legal das instalações. Rigor de engenharia em cada ligação.</p>
+            <div class="btn-row">
+              <a class="btn btn-pine" href="contactos.html" data-i18n="nav.cta">Pedir orçamento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="panel bg-pine-deep">
+      <div class="panel-inner cta-final">
+        <h2 class="display" data-i18n="svcpage.cta.h2">Não sabe por onde começar?</h2>
+        <p data-i18n="svcpage.cta.p">Comece pelo simulador — ou fale diretamente com a nossa equipa de engenharia.</p>
+        <div class="btn-row">
+          <a class="btn btn-amber" href="simulador.html" data-i18n="home.final.cta">Abrir o simulador</a>
+          <a class="btn btn-outline" href="contactos.html" data-i18n="home.cta2">Falar com um engenheiro</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <img data-img="assets/img/Logo" alt="IBK Green Energy X" />
+        <p data-i18n="footer.tagline">Engenharia de energias renováveis para Portugal e Espanha.</p>
+      </div>
+      <div>
+        <h5 data-i18n="footer.nav">Navegação</h5>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="simulador.html" data-i18n="nav.simulator">Simulador</a></li>
+          <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="footer.services">Serviços</h5>
+        <ul>
+          <li><a href="servicos.html#solar" data-i18n="footer.solar">Solar fotovoltaico</a></li>
+          <li><a href="servicos.html#baterias" data-i18n="footer.batt">Baterias e backup</a></li>
+          <li><a href="servicos.html#carregadores" data-i18n="footer.ev">Carregadores VE</a></li>
+          <li><a href="servicos.html#eletricas" data-i18n="footer.elec">Instalações elétricas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="footer.contact">Contactos</h5>
+        <ul>
+          <li><a href="mailto:geral@ibkgreenenergyx.com">geral@ibkgreenenergyx.com</a></li>
+          <li><a href="contactos.html" data-i18n="nav.cta">Pedir orçamento</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IBK Green Energy X. <span data-i18n="footer.rights">Todos os direitos reservados.</span></span>
+      <span>Portugal · España</span>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
