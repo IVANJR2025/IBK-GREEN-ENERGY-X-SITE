@@ -187,10 +187,23 @@
     document.getElementById("cf-submit").addEventListener("click", () => {
       const name = document.getElementById("cf-name").value.trim();
       const email = document.getElementById("cf-email").value.trim();
+      const phone = document.getElementById("cf-phone").value.trim();
+      const subject = document.getElementById("cf-subject").value;
       const msg = document.getElementById("cf-msg").value.trim();
-      if (!name || !email || !msg) { alert("Por favor preencha pelo menos nome, email e mensagem."); return; }
+
+      if (!name || !email || !msg) {
+        alert("Por favor preencha pelo menos nome, email e mensagem.");
+        return;
+      }
+
+      const text = `*Nova mensagem do site IBK Green Energy X*%0A%0A*Nome:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Telefone:* ${encodeURIComponent(phone)}%0A*Assunto:* ${encodeURIComponent(subject)}%0A%0A*Mensagem:*%0A${encodeURIComponent(msg)}`;
+
       document.getElementById("form-body").style.display = "none";
       document.getElementById("form-sent").style.display = "block";
+
+      setTimeout(() => {
+        window.open(`https://wa.me/351917400688?text=${text}`, "_blank");
+      }, 800);
     });
   </script>
 </body>
